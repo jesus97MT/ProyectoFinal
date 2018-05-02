@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    *Sidenav content*
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div> -->
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <span class="sidenav-spacer"></span>
+        <p>Punto Medio</p>
+        <span class="sidenav-spacer"></span>
+        <button mat-icon-button>
+          <mat-icon>person</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
