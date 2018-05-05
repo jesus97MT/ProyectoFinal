@@ -21,7 +21,10 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": {
+        "start": "ng serve"
+      }
+      ,
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
