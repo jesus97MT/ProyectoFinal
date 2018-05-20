@@ -1,1 +1,5 @@
-<app-header></app-header>
+<ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.name}}
+    </li>
+  </ul>
