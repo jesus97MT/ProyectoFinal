@@ -8,9 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public data;
   title = 'Punto Medio App';
   items: Observable<any[]>;
   constructor(db: AngularFirestore) {
     this.items = db.collection('items').valueChanges();
+    this.items.subscribe(val => {
+      this.data = val;
+    });
+  }
+
+  pepe () {
+    console.log(this.data)
   }
 }
