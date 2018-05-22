@@ -11,7 +11,7 @@ export class PoemComponent implements OnInit {
   public data;
   items: Observable<any[]>;
   constructor(db: AngularFirestore) {
-    this.items = db.collection('poem').snapshotChanges();
+    this.data = db.collection('poem').snapshotChanges();
     // this.items.subscribe(val => {
     //   console.log(val[0].payload.doc.id);
     //   this.data = val[0].payload.doc.data().title;
