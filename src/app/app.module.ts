@@ -14,6 +14,9 @@ import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { MainFormComponent } from './main-form/main-form.component';
 import { PoemComponent } from './poem/poem.component';
+import { LoginModule } from './login/login.module';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +24,7 @@ import { PoemComponent } from './poem/poem.component';
     AppComponent,
     HeaderComponent,
     MainFormComponent,
-    PoemComponent
+    PoemComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,9 @@ import { PoemComponent } from './poem/poem.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    AppRoutingModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
