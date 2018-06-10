@@ -1,0 +1,14 @@
+.form-login {
+    min-width: 150px;
+    max-width: 500px;
+    margin: 5em auto;
+    width: 80%;
+  }
+  
+.form-field-input{
+    width: 100%;
+}
+.button-enter {
+    margin-top: 5em;
+    width: 100%;;
+}
