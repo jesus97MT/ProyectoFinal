@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { auth } from 'firebase/app';
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
   events = [];
   
-  constructor() { }
+  constructor(
+    public authService: AuthService
+  ) {
+    auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log('si');
+      } else {
+        console.log('no');
+      }
+    });
+  }
+  logout() {
+    this.authService.logout();
+  }
 
   ngOnInit() {
   }

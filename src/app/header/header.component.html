@@ -1,7 +1,7 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
                (closed)="events.push('close!')">
-    *Sidenav content*
+    <button (click)="logout()">Disconnect</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
@@ -12,7 +12,7 @@
         <span class="sidenav-spacer"></span>
         <p routerLink="" routerLinkActive="active">Poem Lover</p>
         <span class="sidenav-spacer"></span>
-        <button routerLink="/sign-in" routerLinkActive="active" mat-icon-button>
+        <button routerLink="/sign-up" routerLinkActive="active" mat-icon-button>
           <mat-icon>person</mat-icon>
         </button>
       </mat-toolbar-row>

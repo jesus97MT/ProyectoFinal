@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor() { }
+  public email: string;
+  public password: string;
+  public repeatPassword: string;
+  
+
+  constructor(
+    public authService: AuthService
+  ) { }
+
+  createUser() {
+    if( this.email && this.password && this.password === this.repeatPassword) {
+      this.authService.createUser(this.email, this.password);
+    }
+  }
 
   ngOnInit() {
   }

@@ -1,12 +1,12 @@
-<form class="form-login">
+<form class="form-login" (ngSubmit)="createUser()">
     <mat-form-field class="form-field-input">
-      <input matInput placeholder="Email">
+      <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
     </mat-form-field>
     <mat-form-field class="form-field-input">
-      <input type="password" matInput placeholder="Password">        
+      <input type="password" matInput placeholder="Password" [(ngModel)]="password" name="password" required>        
     </mat-form-field>
     <mat-form-field class="form-field-input">
-        <input type="password" matInput placeholder="Repeat Password">        
+        <input type="password" matInput placeholder="Repeat Password" [(ngModel)]="repeatPassword" name="repeatPassword" required>        
       </mat-form-field>
     <button mat-flat-button class="button-enter">Sign up</button>
 </form>
