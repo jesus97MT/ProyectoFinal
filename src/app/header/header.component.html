@@ -2,6 +2,8 @@
   <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
                (closed)="events.push('close!')">
     <button (click)="logout()">Disconnect</button>
+    <button routerLink="/sign-in" routerLinkActive="active">Sign In</button>
+    <button routerLink="/create-poem" routerLinkActive="active">Create</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">

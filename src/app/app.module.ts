@@ -5,6 +5,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -17,6 +19,7 @@ import { PoemComponent } from './poem/poem.component';
 import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { CreatePoemComponent } from './create-poem/create-poem.component';
 
 
 @NgModule({
@@ -25,6 +28,7 @@ import { RouterModule, Routes } from '@angular/router';
     HeaderComponent,
     MainFormComponent,
     PoemComponent,
+    CreatePoemComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { RouterModule, Routes } from '@angular/router';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

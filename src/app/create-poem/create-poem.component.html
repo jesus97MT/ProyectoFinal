@@ -1,0 +1,16 @@
+<form class="create-poem">
+  <mat-form-field class="form-field-input">
+    <input matInput placeholder="Title" required>
+  </mat-form-field>
+  <mat-form-field class="form-field-input">
+    <input matInput placeholder="First verse" required>
+  </mat-form-field>
+    <p>Number of votes per verse: {{value}}</p>
+  <mat-slider class="slider" min="3" displayValue="2" max="10" [(ngModel)]="value" name="slider"></mat-slider>
+  <mat-slide-toggle [(ngModel)]="privacity" name="privacity">{{privacity ? 'Public' : 'Anonymous'}}</mat-slide-toggle>
+  <mat-form-field class="form-field-input" *ngIf="!privacity">
+    <input matInput placeholder="alias">
+  </mat-form-field>
+  <p>Create by: jesus</p>
+  <button mat-flat-button class="button-enter">Create</button>
+</form>

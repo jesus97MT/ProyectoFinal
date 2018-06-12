@@ -19,12 +19,6 @@ export class SignInComponent implements OnInit {
 
   login() {
     this.authService.login(this.email, this.password);
-    var user = auth().currentUser;
-    if (user) {
-      console.log(user);
-    } else {
-      console.log('disconected');
-    }
   }
   
 
