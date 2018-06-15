@@ -5,3 +5,7 @@
 body{
     margin: 0;
 }
+
+.create-poem-snackbar {
+    background-color: #b24747 !important;
+}

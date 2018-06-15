@@ -1,16 +1,16 @@
 <form class="create-poem">
   <mat-form-field class="form-field-input">
-    <input matInput placeholder="Title" required>
+    <input matInput [(ngModel)]="title" name="title" placeholder="Title" required>
   </mat-form-field>
-  <mat-form-field class="form-field-input">
-    <input matInput placeholder="First verse" required>
+  <mat-form-field  class="form-field-input">
+    <input matInput [(ngModel)]="firstVerse" name="title" placeholder="First verse" required>
   </mat-form-field>
-    <p>Number of votes per verse: {{value}}</p>
-  <mat-slider class="slider" min="3" displayValue="2" max="10" [(ngModel)]="value" name="slider"></mat-slider>
+    <p>Number of votes per verse: {{numVotes}}</p>
+  <mat-slider class="slider" min="3" displayValue="2" max="10" [(ngModel)]="numVotes" name="numVotes"></mat-slider>
   <mat-slide-toggle [(ngModel)]="privacity" name="privacity">{{privacity ? 'Public' : 'Anonymous'}}</mat-slide-toggle>
   <mat-form-field class="form-field-input" *ngIf="!privacity">
-    <input matInput placeholder="alias">
+    <input matInput placeholder="alias" [(ngModel)]="alias" name="alias">
   </mat-form-field>
   <p>Create by: jesus</p>
-  <button mat-flat-button class="button-enter">Create</button>
+  <button mat-flat-button class="button-enter" (click)="uploadPoem()">Create</button>
 </form>

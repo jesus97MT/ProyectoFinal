@@ -20,6 +20,7 @@ import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatePoemComponent } from './create-poem/create-poem.component';
+import { MatSnackBarModule } from "@angular/material";
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CreatePoemComponent } from './create-poem/create-poem.component';
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     AppRoutingModule,
     LoginModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
