@@ -14,22 +14,22 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './header/header.component';
-import { MainFormComponent } from './main-form/main-form.component';
 import { PoemComponent } from './poem/poem.component';
 import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatePoemComponent } from './create-poem/create-poem.component';
 import { MatSnackBarModule } from "@angular/material";
+import { DisplayNamePipe } from './pipes/display-name.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainFormComponent,
     PoemComponent,
     CreatePoemComponent,
+    DisplayNamePipe,
   ],
   imports: [
     BrowserModule,
