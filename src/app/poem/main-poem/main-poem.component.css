@@ -1,0 +1,35 @@
+
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+
+
+  .title-poem{
+    margin: 0 auto;
+  }
+
+
+
+  .text-poem{
+      text-align: center;
+      
+  }
+
+  .card-inside {
+      width: 100%;
+  }
+
+    .form-field-input {
+        width: 100%!important;
+    }
+
+    .button-up-verse {
+        width: 100%;;
+    }
+
+    .author{
+        text-align: right;
+    }

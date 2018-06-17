@@ -48,13 +48,15 @@ export class CreatePoemComponent implements OnInit {
       if (this.privacity) {
         poems.add({'title' : this.title, 'firstVerse': this.firstVerse,
           'necessaryVotes': this.numVotes, 'author': this.name,
-          'poem': this.firstVerse ,idUser: this.userUid});
+          'poem': this.firstVerse ,idUser: this.userUid, isFinished: 'false',
+          'date': Date.now() });
           this.router.navigate(['']);
       } else {
         if (this.alias) {
           poems.add({'title' : this.title, 'firstVerse': this.firstVerse,
             'necessaryVotes': this.numVotes, 'author': this.alias,
-            'poem': this.firstVerse, idUser: this.userUid });
+            'poem': this.firstVerse, idUser: this.userUid, isFinished: 'false',
+            'date': Date.now() });
           this.router.navigate(['']);  
         } else {
           const text = 'Complete the field Alias';

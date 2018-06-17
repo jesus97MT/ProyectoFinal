@@ -21,6 +21,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreatePoemComponent } from './create-poem/create-poem.component';
 import { MatSnackBarModule } from "@angular/material";
 import { DisplayNamePipe } from './pipes/display-name.pipe';
+import { CheckDataDirective } from './directives/check-data.directive';
+import { MainPoemComponent } from './poem/main-poem/main-poem.component';
+import { VotingPoemComponent } from './poem/voting-poem/voting-poem.component';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { DisplayNamePipe } from './pipes/display-name.pipe';
     PoemComponent,
     CreatePoemComponent,
     DisplayNamePipe,
+    CheckDataDirective,
+    MainPoemComponent,
+    VotingPoemComponent,
   ],
   imports: [
     BrowserModule,

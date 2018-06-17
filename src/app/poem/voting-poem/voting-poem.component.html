@@ -1,0 +1,10 @@
+<div class="votting-verse" *ngFor="let verse of verses | async">
+  <div class="verse">{{ verse.payload.doc.data().verse }}</div>
+  <button mat-icon-button color="primary" class="button-vote">
+    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+  </button>
+</div>
+<div class="author-container">
+  <div class="author">jesus</div>
+</div>
+<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>

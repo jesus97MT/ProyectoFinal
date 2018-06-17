@@ -9,3 +9,6 @@ body{
 .create-poem-snackbar {
     background-color: #b24747 !important;
 }
+.mat-tab-label{
+    width: 50%!important;
+  }
