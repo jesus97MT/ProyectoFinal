@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Ag } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { BehaviorSubject } from 'rxjs';
@@ -19,7 +19,7 @@ export class MainPoemComponent implements OnInit {
   
 
   constructor(
-    private afs: AngularFirestore,    
+    private afs: AngularFirestore,
   ) {
   }
 
@@ -43,13 +43,8 @@ export class MainPoemComponent implements OnInit {
 
   upVerse (item) {
     if (this.verse) {
-            
       const poems = this.afs.collection(`poem/`).doc(item).collection('nextVerse');
-      console.log(poems.doc(this.userUid).snapshotChanges().subscribe(item =>));
-      poems.doc(this.userUid).set({'verse': this.verse, 'votes': 0 });
-      console.log(poems.doc(this.userUid).collection);
-
-      //poems.update({'userUid': this.userUid, 'emailUser': this.emailUser, 'verse': this.verse})
+      poems.doc(this.userUid).set({'verse': this.verse, 'votes': 0, 'author': this.emailUser });
     }
   }
 

@@ -7,7 +7,10 @@ export class DisplayNamePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     if (value) {  
-      const displayName = value.substring(0, value.lastIndexOf("@"));
+      let displayName = value.substring(0, value.lastIndexOf("@"));
+      if (displayName === '') {
+        displayName = value;
+      }
       return displayName;
     } else {
       return value;
