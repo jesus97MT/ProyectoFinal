@@ -16,6 +16,7 @@ export class MainPoemComponent implements OnInit {
   public verse:string;
   public isNewVerse =  new BehaviorSubject({});
   public ownPoem: boolean;
+  public fullPoem;
   
 
   constructor(
@@ -28,6 +29,7 @@ export class MainPoemComponent implements OnInit {
 
   ngAfterViewInit(){
     this.isFirstVerse(this.item.payload.doc.id);
+    this.getFullPoem();
 
   }
 
@@ -43,14 +45,20 @@ export class MainPoemComponent implements OnInit {
 
   upVerse (item) {
     if (this.verse) {
-      const poems = this.afs.collection(`poem/`).doc(item).collection('nextVerse');
+      const poems = this.afs.collection('poem/').doc(item).collection('nextVerse');
       poems.doc(this.userUid).set({'verse': this.verse, 'votes': 0, 'author': this.emailUser });
     }
   }
 
   isFirstVerse(item) {
-    const poems = this.afs.collection(`poem/`).doc(item).collection('nextVerse');
+    const poems = this.afs.collection('poem/').doc(item).collection('nextVerse');
     poems.doc(this.userUid).snapshotChanges().subscribe(item => item.payload.exists ? this.isNewVerse.next(false) : this.isNewVerse.next(true));
+  }
+
+  getFullPoem() {
+    const poemId = this.item.payload.doc.id;
+    this.fullPoem = this.afs.collection('poem').doc(poemId).collection('verses', ref => ref.orderBy('date', 'desc')).snapshotChanges()
+    this.fullPoem.subscribe(e => console.log(e));
   }
 
 }

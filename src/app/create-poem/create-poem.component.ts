@@ -49,14 +49,14 @@ export class CreatePoemComponent implements OnInit {
         poems.add({'title' : this.title, 'firstVerse': this.firstVerse,
           'necessaryVotes': this.numVotes, 'author': this.name,
           'poem': this.firstVerse ,idUser: this.userUid, isFinished: 'false',
-          'date': Date.now() });
+          'date': Date.now() }).then(e => poems.doc(e.id).collection('verses').add({'verse': this.firstVerse, 'date': Date.now()}));
           this.router.navigate(['']);
       } else {
         if (this.alias) {
           poems.add({'title' : this.title, 'firstVerse': this.firstVerse,
             'necessaryVotes': this.numVotes, 'author': this.alias,
             'poem': this.firstVerse, idUser: this.userUid, isFinished: 'false',
-            'date': Date.now() });
+            'date': Date.now() }).then(e => poems.doc(e.id).collection('verses').add({'verse': this.firstVerse, 'date': Date.now()}));
           this.router.navigate(['']);  
         } else {
           const text = 'Complete the field Alias';
