@@ -1,9 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="push" [(opened)]="opened" (opened)="events.push('open!')"
                (closed)="events.push('close!')">
-    <button (click)="logout()">Disconnect</button>
-    <button routerLink="/sign-in" routerLinkActive="active">Sign In</button>
-    <button routerLink="/create-poem" routerLinkActive="active">Create</button>
+               <div *ngIf="auth.getValue()" style="color:white; font-size: 24px;">
+                Hola <b>{{user | displayName }}</b>
+               </div>
+               <div *ngIf="!auth.getValue()" style="color:white">
+                  Hi log-in or log-up!!
+                 </div>
+
+               <mat-list role="list" >
+                  <mat-list-item *ngIf="auth.getValue()" role="listitem" routerLink="/" routerLinkActive="active">Index</mat-list-item>
+                  <mat-list-item *ngIf="auth.getValue()" role="listitem" routerLink="/create-poem" routerLinkActive="active">Create</mat-list-item>
+                  <mat-list-item *ngIf="auth.getValue()" role="listitem" (click)="logout()">Disconnect</mat-list-item>
+                  <mat-list-item *ngIf="!auth.getValue()" role="listitem" routerLink="/sign-in" routerLinkActive="active">Sign in</mat-list-item>                  
+                </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">

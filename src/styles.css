@@ -6,9 +6,19 @@ body{
     margin: 0;
 }
 
+.mat-sidenav-content{
+    background-color: #CEF0FF!important;
+}
 .create-poem-snackbar {
     background-color: #b24747 !important;
 }
 .mat-tab-label{
     width: 50%!important;
+  }
+
+  .mat-sidenav{
+      background-color: #872187!important;
+  }
+  .mat-list-item-content{
+      color: white!important
   }

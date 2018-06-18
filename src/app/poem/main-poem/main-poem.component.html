@@ -5,12 +5,12 @@
         <mat-card-header>
           <!-- <div mat-card-avatar class="example-header-image"></div> -->
           <div class="title-poem">
-              <mat-card-title> <h3><u>{{item.payload.doc.data().title}}</u></h3> </mat-card-title>
+              <mat-card-title> <h3><u>{{ item.payload.doc.data().title | uppercase }}</u></h3> </mat-card-title>
           </div>
         </mat-card-header>
         <mat-card-content>
           <div class="text-poem" *ngFor="let verse of fullPoem | async">
-              {{ verse.payload.doc.data().verse }}
+              <i>{{ verse.payload.doc.data().verse }}</i>
               <br>
           </div>
         </mat-card-content>
@@ -37,11 +37,11 @@
       </mat-form-field>
       <button mat-flat-button class="button-up-verse" color="primary" (click)="upVerse(item.payload.doc.id)">Up!</button>
     </form>
-    <div *ngIf="!isNewVerse.getValue() && !ownPoem">
-      You have alredy create verse
+    <div *ngIf="!isNewVerse.getValue() && !ownPoem" class="alert">
+      <b>You have alredy create verse</b>
     </div>
-    <div *ngIf="ownPoem">
-      You cant create verses becouse you are the creator
+    <div *ngIf="ownPoem" class="alert">
+      <b>You cant create verses becouse you are the creator</b>
     </div>
   </mat-expansion-panel>
 </mat-accordion>

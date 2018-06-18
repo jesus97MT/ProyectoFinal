@@ -57,18 +57,17 @@ export class VotingPoemComponent implements OnInit {
   
   votingIsOver(idVerse, idPoem, verseVotes, verseText) {
     const poemVotes = this.item.payload.doc.data().necessaryVotes;
+
     if (poemVotes === verseVotes) {
       const poem = this.afs.collection('poem').doc(idPoem).collection('verses');
+
       poem.add({'verse': verseText, 'date': Date.now()});
+
       const toDelete = this.afs.collection('poem/').doc(idPoem).collection('nextVerse');
       toDelete.stateChanges().subscribe(e => e.forEach(e => {
         toDelete.doc(e.payload.doc.id).delete()
-       }));
-      } else {
-      }
+      }));
     }
   }
-
-
 
 }

@@ -1,4 +1,4 @@
-<div *ngFor="let verse of verses | async">
+<div *ngFor="let verse of verses | async ; let i = index">
   <div class="votting-verse">
     <div class="verse">{{ verse.payload.doc.data().verse }}</div>
     <button mat-icon-button color="primary" class="button-vote">

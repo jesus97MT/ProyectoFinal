@@ -57,8 +57,7 @@ export class MainPoemComponent implements OnInit {
 
   getFullPoem() {
     const poemId = this.item.payload.doc.id;
-    this.fullPoem = this.afs.collection('poem').doc(poemId).collection('verses', ref => ref.orderBy('date', 'desc')).snapshotChanges()
-    this.fullPoem.subscribe(e => console.log(e));
+    this.fullPoem = this.afs.collection('poem').doc(poemId).collection('verses', ref => ref.orderBy('date', 'asc')).snapshotChanges()
   }
 
 }
