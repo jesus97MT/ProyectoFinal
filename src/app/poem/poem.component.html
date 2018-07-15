@@ -1,7 +1,7 @@
-<mat-card class="example-card" *ngFor="let item of data | async">
+<mat-card class="example-card" *ngFor="let item of data | async; trackBy: trackByHeroes">
 <mat-tab-group>
   <mat-tab label="Poem" class="mat-tab-poem">
-    <app-main-poem [item]="item" [userUid]="userUid" [emailUser]="emailUser"></app-main-poem>
+    <app-main-poem [item]="item" [userUid]="userUid" [emailUser]="emailUser" (changeTabMainPoem)="changeTabToMain(index)"></app-main-poem>
   </mat-tab>
   <mat-tab label="Voting" class="mat-tab-poem">
     <app-voting-poem [item]="item" [userUid]="userUid"></app-voting-poem>

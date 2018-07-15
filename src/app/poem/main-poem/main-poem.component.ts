@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { BehaviorSubject } from 'rxjs';
 

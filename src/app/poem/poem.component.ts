@@ -18,11 +18,13 @@ export class PoemComponent implements OnInit {
 
   @Output() onCreate: EventEmitter<any> = new EventEmitter<any>();
 
+
   public data;
   public userData = new BehaviorSubject({});
   public userUid: string;
   public emailUser: string;
   public ownPoem: boolean = false;
+  
   
   
   
