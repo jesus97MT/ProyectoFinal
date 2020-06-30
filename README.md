@@ -43,9 +43,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Preview
 
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png ){:height="731px" width="411px"}
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/2.png ){:height="731px" width="411px"}
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/4.png ){:height="731px" width="411px"}
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/5.png ){:height="731px" width="411px"}
-
-
+<p align="center">
+  <img src="https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png" width="411" title="hover text">
+  <img src="https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/2.png" width="411" title="hover text">
+  <img src="https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/4.png" width="411" title="hover text">
+  <img src="https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/5.png" width="411" title="hover text">
+  
+</p>
