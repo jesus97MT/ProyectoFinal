@@ -1,27 +1,43 @@
-# ProyectoFinal
+# PoemLover Final Proyect
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+PoemLover is an application to create collaborative poems, in which you create the title of a poem and the first verse and the community will suggest a verse and the most voted will be added below.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To access the application you must enter the following [link](https://proyectofinal-jesus97mt.web.app/) and register, once registered you can see the poems that people have added and in the menu you can go create your own poem.
 
-## Code scaffolding
+## Functionalities Now
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  * Create user and login
+  * Create poem, title, author and numbers of vote to accept the verse
+  * Vote others poems
+  * Add verses to other poems 
+  
+  ## Functionalities In The Future
 
-## Build
+  * End a poem
+  * Follow poets
+  * Add images at poems
+  * Design improvements
+  * Share poems
+  * And more!!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [Back-End] - Built with Firebase(Firestore)
+* [Front-End] - Built with Angular+2 + Angular Material
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Version App
 
-## Further help
+PoemLover 1.0.0
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Authors
+
+* **Jesús Martínez Torrecilla** - *Initial work* - [jesus97MT](https://github.com/jesus97MT)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
