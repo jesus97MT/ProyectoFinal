@@ -43,9 +43,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Preview
 
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png =411x731)
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/2.png =411x731)
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png =411x731)
-![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/4.png =411x731)
+![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png width="411")
+![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/2.png  width="411")
+![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/1.png  width="411")
+![alt text](https://github.com/jesus97MT/ProyectoFinal/blob/master/src/assets/4.png  width="411")
 
 
